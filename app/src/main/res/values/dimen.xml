@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="movie_feed_tile_margin">8dp</dimen>
+    <dimen name="movie_feed_tile_title_size">18sp</dimen>
+    <dimen name="movie_detail_label_margin">8dp</dimen>
+    <dimen name="movie_detail_tile">24sp</dimen>
+    <dimen name="movie_detail_field_vertical_margin">8dp</dimen>
+</resources>

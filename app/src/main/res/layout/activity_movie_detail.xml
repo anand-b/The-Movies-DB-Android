@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".activity.MovieDetailActivity">
+
+        <ImageView
+            android:id="@+id/movie_poster"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:contentDescription="@string/movie_poster_content_description" />
+
+        <TextView
+            android:id="@+id/movie_title"
+            android:textSize="@dimen/movie_detail_tile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/movie_detail_field_vertical_margin"
+            android:layout_marginBottom="@dimen/movie_detail_field_vertical_margin"
+            android:layout_marginLeft="@dimen/movie_detail_label_margin"
+            android:layout_marginStart="@dimen/movie_detail_label_margin"
+            android:layout_marginEnd="@dimen/movie_detail_label_margin"
+            android:layout_marginRight="@dimen/movie_detail_label_margin"
+            app:layout_constraintTop_toBottomOf="@+id/movie_poster"
+            tools:text="Movie Title"/>
+
+        <TextView
+            android:id="@+id/release_date_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/movie_detail_field_vertical_margin"
+            android:layout_marginBottom="@dimen/movie_detail_field_vertical_margin"
+            android:paddingLeft="@dimen/movie_detail_label_margin"
+            android:paddingStart="@dimen/movie_detail_label_margin"
+            android:paddingEnd="@dimen/movie_detail_label_margin"
+            android:paddingRight="@dimen/movie_detail_label_margin"
+            app:layout_constraintTop_toBottomOf="@id/movie_title"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/release_date"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/release_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/release_date_label"
+            app:layout_constraintStart_toEndOf="@id/label_barrier"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="2019-11-26"/>
+
+        <TextView
+            android:id="@+id/overview_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/movie_detail_field_vertical_margin"
+            android:layout_marginBottom="@dimen/movie_detail_field_vertical_margin"
+            android:paddingLeft="@dimen/movie_detail_label_margin"
+            android:paddingStart="@dimen/movie_detail_label_margin"
+            android:paddingEnd="@dimen/movie_detail_label_margin"
+            android:paddingRight="@dimen/movie_detail_label_margin"
+            app:layout_constraintTop_toBottomOf="@id/release_date"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/overview"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/overview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/overview_label"
+            app:layout_constraintStart_toEndOf="@id/label_barrier"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Plot Synopsis of the movie"/>
+
+        <TextView
+            android:id="@+id/vote_average_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/movie_detail_field_vertical_margin"
+            android:layout_marginBottom="@dimen/movie_detail_field_vertical_margin"
+            android:paddingLeft="@dimen/movie_detail_label_margin"
+            android:paddingStart="@dimen/movie_detail_label_margin"
+            android:paddingEnd="@dimen/movie_detail_label_margin"
+            android:paddingRight="@dimen/movie_detail_label_margin"
+            app:layout_constraintTop_toBottomOf="@id/overview"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/vote_average"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/vote_average"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/vote_average_label"
+            app:layout_constraintStart_toEndOf="@id/label_barrier"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="5.0"/>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/label_barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="overview_label,release_date_label,vote_average_label"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
