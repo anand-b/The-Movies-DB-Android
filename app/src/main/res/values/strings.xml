@@ -17,4 +17,5 @@
     </plurals>
 
     <string name="movie_poster_content_description">Movie Poster</string>
+    <string name="trailers">Trailers (%1$d)</string>
 </resources>

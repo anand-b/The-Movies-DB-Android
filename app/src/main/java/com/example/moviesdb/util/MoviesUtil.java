@@ -40,6 +40,19 @@ public class MoviesUtil {
         return null;
     }
 
+    public static URL getMovieTrailersURL(@NonNull String movieId) {
+        try {
+            Uri.Builder builder = getMovieBaseUriBuilder();
+            builder.appendPath(movieId);
+            builder.appendPath("videos");
+            builder.appendQueryParameter(API_KEY_PARAM, API_KEY);
+            return new URL(builder.build().toString());
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     private static Uri.Builder getImageBaseUrl() {
         return new Uri.Builder()
                 .scheme("https")

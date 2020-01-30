@@ -8,4 +8,23 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+    <style name="MovieDetailRow">
+        <item name="android:layout_marginTop">@dimen/movie_detail_field_vertical_margin</item>
+        <item name="android:layout_marginBottom">@dimen/movie_detail_field_vertical_margin</item>
+        <item name="android:paddingLeft">@dimen/movie_detail_label_margin</item>
+        <item name="android:paddingStart">@dimen/movie_detail_label_margin</item>
+        <item name="android:paddingEnd">@dimen/movie_detail_label_margin</item>
+        <item name="android:paddingRight">@dimen/movie_detail_label_margin</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="MovieDetailHeading">
+        <item name="android:layout_marginTop">@dimen/movie_detail_field_vertical_margin</item>
+        <item name="android:layout_marginBottom">@dimen/movie_detail_field_vertical_margin</item>
+        <item name="android:layout_marginLeft">@dimen/movie_detail_label_margin</item>
+        <item name="android:layout_marginStart">@dimen/movie_detail_label_margin</item>
+        <item name="android:layout_marginEnd">@dimen/movie_detail_label_margin</item>
+        <item name="android:layout_marginRight">@dimen/movie_detail_label_margin</item>
+        <item name="android:textSize">@dimen/movie_detail_tile</item>
+    </style>
 </resources>

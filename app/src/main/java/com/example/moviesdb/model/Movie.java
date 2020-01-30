@@ -3,9 +3,10 @@ package com.example.moviesdb.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-public class Movie implements Parcelable {
+public class Movie implements Parcelable, Model {
     private final long id;
     @Nullable private final String title;
     @Nullable private final String posterPath;
@@ -46,6 +47,9 @@ public class Movie implements Parcelable {
             return new Movie[size];
         }
     };
+
+    @NonNull
+    public long getId() {return id;}
 
     @Nullable
     public String getTitle() {
